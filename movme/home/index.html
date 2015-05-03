@@ -1,0 +1,170 @@
+		<div class="display-animation" ng-controller="movme">
+				<div class="row margin-bottom-40">
+					<div class="col-md-4">
+						<img src="https://www.gamerholic.com/public/views/movme/images/emotiv4.jpg">
+					</div>
+					<div class="col-md-6">
+						<h2 class="text-left text-deep-purple text-center">
+							Watch video game trailers <i class="fa fa-bitcoin fa-xl text-deep-orange"></i> Get Bitcoin
+						</h2>
+							<div class="note note-warning note-left-striped">
+								<h4>Game developers would love your honest feedback</h4>
+								<p>
+								Watch 2-5 game trailer while wearing the emotiv BCI (brain computer interface) and get paid in bitcoin, it's that easy?
+								</p>
+							</div>
+							<div class="row text-center">
+								<h3 class="text-center"><strong>Earnings: <i class="fa fa-bitcoin"></i>{{bitcoin}}</strong></h3>
+							</div>
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="legend text-center">Videos</div>
+
+					<div class="col-md-4">
+						<div class="card card-image card-light-blue bg-image bg-opaque8 sample-bg-image6">
+
+							<div class="context has-action-left has-action-right">
+
+								<div class="tile-action">
+									<i class="ion-gear-b"></i>
+								</div>
+
+								<div class="tile-content">
+									<span class="text-title">DEUS EX: MANKIND Divided Trailer</span>
+									<span class="text-subtitle"><i class="fa fa-bitcoin"></i> 5 <small>Ends:</small> 5/4/2015</span>
+								</div>
+
+								<div class="tile-action right">
+									<i class="fa fa-play-circle-o text-cyan"></i>
+								</div>
+
+							</div>
+
+						</div><!--.card-->
+					</div>					
+					<div class="col-md-4">
+						<div class="card card-image card-light-blue bg-image bg-opaque8 sample-bg-image5">
+
+							<div class="context has-action-left has-action-right">
+
+								<div class="tile-action">
+									<i class="ion-gear-b"></i>
+								</div>
+
+								<div class="tile-content">
+									<span class="text-title">MORTAL KOMBAT X - Briggs Family Trailer</span>
+									<span class="text-subtitle"><i class="fa fa-bitcoin"></i> 10 <small>Ends:</small> 5/4/2015</span>
+								</div>
+
+								<div class="tile-action right">
+									<i class="fa fa-play-circle-o text-cyan"></i>
+								</div>
+
+							</div>
+
+						</div><!--.card-->
+					</div>					
+					<div class="col-md-4">
+						<div class="card card-image card-light-blue bg-image bg-opaque8 sample-bg-image4">
+
+							<div class="context has-action-left has-action-right">
+
+								<div class="tile-action">
+									<i class="ion-gear-b"></i>
+								</div>
+
+								<div class="tile-content">
+									<span class="text-title">Mad Max</span>
+									<span class="text-subtitle"><i class="fa fa-bitcoin"></i> 10 <small>Ends:</small> 5/4/2015</span>
+								</div>
+
+								<div class="tile-action right">
+									<i class="fa fa-play-circle-o text-cyan"></i>
+								</div>
+
+							</div>
+
+						</div><!--.card-->
+					</div>	
+
+					<div class="row text-center"><a href class="btn btn-primary btn-lg" data-toggle="modal" data-target="#panel-addMovie"><i class="fa fa-check-circle"></i>  Add Movie</a></div>	
+				</div>
+			<div class="card card-video card-player-orange" style="display:none">
+
+					<div class="card-heading">
+
+						<video id="youtube" class="video-js video-js-responsive vjs-default-skin vjs-big-play-centered" controls preload="none" data-width="640" data-height="360" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=Q8TXgCzxEnw" }'></video>
+
+					</div><!--.card-heading-->
+
+					<div class="card-body">
+						<h4>Youtube Video Support</h4>
+						<p>YouTube playback technology for the Video.js player.</p>
+					</div><!--.card-body-->
+
+				</div>
+
+
+					<div class="modal fade full-height from-right" id="panel-addMovie" tabindex="-1" role="dialog" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h4 class="modal-title"></h4>
+							</div>
+							<div class="modal-body">
+								<div class="note note-primary note-bottom-striped">
+									<h4 class="text-center">Add a movie</h4>
+									<div class="row">
+										<div class="col-md-8 col-md-offset-2">
+											<p class="well">Want honest feedback about your game trailer? Reward gamers with bitcoin and get in game, brain intelligence.</p>
+
+											<div class="panel-body">
+												<div class="inputer">
+													<div class="input-wrapper">
+														<input type="text" class="form-control" placeholder="title" ng-model="addMovieFormData.title">
+													</div>
+												</div>
+												<div class="inputer">
+													<div class="input-wrapper">
+														<input type="text" class="form-control" placeholder="youtube" ng-model="addMovieFormData.youtube">
+													</div>
+												</div>
+												<div class="inputer">
+													<div class="input-wrapper">
+														<input type="text" class="form-control" placeholder="reward" ng-model="addMovieFormData.reward">
+													</div>
+												</div>
+											<div class="inputer">
+												<div class="input-wrapper">
+													<select class="form-control input-lg" name="endDate" ng-model="addMovieFormData.endDate">
+													<option value="" class="text-muted">Pick one</option>
+													<option value="1">1 Day</option>
+													<option value="2">3 Days</option>
+													<option value="3">7 Days</option>
+												</select>
+												</div>
+											</div>
+
+											<div id="image-group" class="form-group">
+												<button type="button" class="btn btn-info btn-md" ng-click="image()">Add Image</button>
+											</div>
+												<p class="text-center"><button type="button" class="btn btn-primary btn-ripple" ng-click="addMovie()">AddMovie</button></p>
+												<p class="text-center text-info">{{message}}</p>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-flat-primary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div><!--.modal-->
+
+
+		</div><!--.display-animation-->

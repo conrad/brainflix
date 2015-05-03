@@ -2,7 +2,7 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" ng-app="Movme"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,8 +40,6 @@
 	<!-- END PLUGINS CSS -->
 
 	<script src="assets/globals/plugins/modernizr/modernizr.min.js"></script>
-	    <base href="/">
-
 </head>
 <body>
 
@@ -101,11 +99,25 @@
 			</div><!--.row-->
 		</div><!--.page-header-->
 
-		<div ui-view>
-	
+		<div class="display-animation">
+			<div class="text-center h3 text-deep-purple">Watch videos get bitcoin  </div>
+			<div class="card card-video card-player-orange">
 
+					<div class="card-heading">
+
+						<video id="youtube" class="video-js video-js-responsive vjs-default-skin vjs-big-play-centered" controls preload="none" data-width="640" data-height="360" data-setup='{ "techOrder": ["youtube"], "src": "http://www.youtube.com/watch?v=Q8TXgCzxEnw" }'></video>
+
+					</div><!--.card-heading-->
+
+					<div class="card-body">
+						<h4>Youtube Video Support</h4>
+						<p>YouTube playback technology for the Video.js player.</p>
+					</div><!--.card-body-->
+
+				</div>
 
 		</div><!--.display-animation-->
+
 
 		<div class="footer-links margin-top-40">
 			<div class="row no-gutters bg-blue">
@@ -853,51 +865,6 @@
 		<!-- END OF USER LAYER -->
 
 	</div><!--.layer-container-->
-<div class="modal fade full-height from-right" id="panel-login" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h4 class="modal-title"></h4>
-			</div>
-			<div class="modal-body">
-				<div class="note note-primary note-bottom-striped">
-					<h4 class="text-center">Login</h4>
-					<div class="row" style="padding:13px">
-						<form stripe:form="saveCustomer">
-						<div class="inputer inputer-blue">
-							<div class="input-wrapper active">
-								<input type="text" class="form-control" placeholder="Email"  ng-model="email">
-							</div>
-						</div>
-						<div class="inputer inputer-blue">
-							<div class="input-wrapper active">
-								<input type="text" class="form-control" placeholder="Password" ng-model="password">
-							</div>
-						</div>
-						</form>
-					</div>
-
-				</div>
-
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-flat-primary" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div><!--.modal-->
-	<script src="https://gamerholic.com/bower_components/angular/angular.min.js"></script>
-	<script src="https://gamerholic.com/bower_components/angular-route/angular-route.min.js"></script>
-    <script src="https://gamerholic.com/bower_components/angular-animate/angular-animate.js"></script>
-    <script src="https://gamerholic.com/bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="https://gamerholic.com/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-	<script src="https://gamerholic.com/bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="https://gamerholic.com/bower_components/angulartics/src/angulartics.js"></script>
-	<script src="https://gamerholic.com/bower_components/angulartics/src/angulartics-ga.js"></script>
-
-    <script src="https://gamerholic.com/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-
-	<script src="app/app.js"></script>
 
 	<!-- BEGIN GLOBAL AND THEME VENDORS -->
 	<script src="assets/globals/js/global-vendors.js"></script>
@@ -914,7 +881,7 @@
 	<script src="assets/globals/plugins/jquery-knob/dist/jquery.knob.min.js"></script>
 	<script src="assets/globals/plugins/gauge/gauge.min.js"></script>
 	<!-- END PLUGINS AREA -->
-	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
 	<!-- PLEASURE -->
 	<script src="assets/globals/js/pleasure.js"></script>
 
