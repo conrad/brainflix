@@ -52,14 +52,20 @@
 		function checkEvent(){checkInterval=setInterval(function(){
 					EdkDll.EE_EngineGetNextEvent();
 					EdkDll.EE_EmoEngineEventGetEmoState();
-					es = new EmoState();
+					var es = new EmoState();
+					
+					//es.EE_GetContactQualityFromAllChannels();//Get value of Contact Quality
+					//engine.CognitivGetActionsEnabled(0); //return cognitiv actions enabled
 
-					if (es.ExpressivIsBlink()){
-						alert("blink");
-					}
+					/*if (EdkDll.EE_HeadsetGetGyroDelta("emotivtest@gmail.com")){
+						alert("Hi!");
+					}*/
+					
+					
 
-					debugger
-					//console.log("DEM="+dem);
+					//debugger
+					//console.log(es.ExpressivIsLookingLeft());
+					//console.log(EdkDll.EE_HeadsetGetGyroDelta("emotivtest@gmail.com"));
 					checkindex();
 					//postData();
 					// if(count==0){

@@ -435,7 +435,7 @@ EdkDll.EE_EmoEngineEventFree = function() {
 
 // private on plugin
 EdkDll.EE_EmoStateCreate = function() {
-	// return ELSPlugin().ELS_EE_EmoStateCreate();
+	//return ELSPlugin().ELS_EE_EmoStateCreate();
 };
 
 // not used: note free help free memory
